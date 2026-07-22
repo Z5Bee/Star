@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wish Upon a Star</title>
+
+    <!-- Connects the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+        <h1>Wish Upon a Star</h1>
+        <p>Create your own paper star before sending it into space.</p>
+    </header>
+
+<img src="images/star.png" class="decoration wiggle" id="star1" alt="">
+
+<img src="images/star2.png" class="decoration wiggle" id="star2" alt="">
+
+<img src="images/rocket.png" class="decoration wiggle" id="rocket" alt="">
+
+<img src="images/paperstar.png" class="decoration wiggle" id="paper-star" alt="">
+
+
+    <!-- =========================
+         TITLE SCREEN
+    ========================== -->
+
+    <section id="title-screen">
+
+        <h2>Welcome!</h2>
+
+        <p>
+            Fold your paper correctly through each step.
+            Make too many mistakes and you'll have to start over!
+        </p>
+
+        <label for="wish-input" class="wish-label">Write a wish on your star</label>
+        <input id="wish-input" type="text" maxlength="80" placeholder="Type your wish here...">
+
+        <button id="start-btn">
+            Start Game
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         GAME AREA
+         Hidden until Start
+    ========================== -->
+
+    <main id="game-area" class="hidden">
+
+        <!-- Progress -->
+        <section id="progress">
+
+            <h3>Progress</h3>
+
+            <p id="step-counter">
+                Step 1 of 7
+            </p>
+
+            <progress
+                id="progress-bar"
+                value="1"
+                max="7">
+            </progress>
+
+        </section>
+
+
+        <!-- Paper Image -->
+
+        <section id="paper-display">
+
+            <img
+                id="paper-image"
+                src="images/step1.png"
+                alt="Origami folding step">
+
+        </section>
+
+
+        <!-- Instructions -->
+
+        <section id="instruction-box">
+
+            <h3>Current Fold</h3>
+
+            <p id="instruction-text">
+                Fold the paper to the left.
+            </p>
+
+        </section>
+
+
+        <!-- Choices -->
+
+        <section id="choices">
+
+            <button class="choice-btn">
+                Fold Left
+            </button>
+
+            <button class="choice-btn">
+                Fold Right
+            </button>
+
+        </section>
+
+
+        <!-- Feedback -->
+
+        <section id="feedback">
+
+            <p id="feedback-text">
+
+            </p>
+
+        </section>
+
+
+        <!-- Mistakes -->
+
+        <section id="mistakes">
+
+            <h3>Mistakes</h3>
+
+            <p id="mistake-count">
+                0 / 3
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         WIN SCREEN
+    ========================== -->
+
+    <section id="win-screen" class="hidden">
+
+        <h2>Congratulations!</h2>
+
+        <p>
+            Your paper star has become part of the night sky.
+        </p>
+
+        <p id="wish-display" class="hidden"></p>
+
+        <img
+            src="images/final-star.png"
+            alt="Completed Origami Star">
+
+        <button id="restart-btn">
+            Play Again
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         LOSE SCREEN
+    ========================== -->
+
+    <section id="lose-screen" class="hidden">
+
+        <h2>Oops!</h2>
+
+        <p>
+            Your paper became too crumpled.
+            Try again.
+        </p>
+
+        <button id="retry-btn">
+            Try Again
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            Created by Zalean Beebe
+        </p>
+
+        <p>
+            Images and resources will be credited in the README.
+        </p>
+
+    </footer>
+
+
+    <!-- Connects JavaScript -->
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>

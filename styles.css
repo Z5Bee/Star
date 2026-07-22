@@ -1,0 +1,282 @@
+/*page style*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "IM Fell DW Pica", serif;
+    color: white;
+
+    /* Full screen background */
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(10, 12, 30, 0.35);
+
+    z-index: -1;
+}
+
+
+/* header */
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+
+/* main */
+
+section {
+
+    width: 90%;
+    max-width: 850px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    background: rgba(255,255,255,.12);
+
+    backdrop-filter: blur(8px);
+
+    border-radius: 20px;
+
+    box-shadow: 0 0 25px rgba(0,0,0,.3);
+}
+
+
+/* buttons */
+
+button {
+
+    margin-top: 20px;
+
+    padding: 15px 35px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background: #ffd25d;
+
+    color: #222;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+button:hover {
+
+    transform: scale(1.08);
+
+    background: white;
+
+    box-shadow: 0 0 20px gold;
+}
+
+.wish-label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+#wish-input {
+    width: 100%;
+    max-width: 420px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-family: inherit;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+#wish-display {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #fff3b0;
+    text-align: center;
+}
+
+
+
+.hidden{
+    display:none;
+}
+
+
+/* paper*/
+
+#paper-display{
+
+    text-align:center;
+}
+
+#paper-image{
+
+    width:300px;
+    max-width:90%;
+}
+
+
+/* =========================
+   FLOATING DECORATIONS
+========================= */
+
+.decoration{
+
+    position:absolute;
+
+    width:60px;
+
+    pointer-events:none;
+
+}
+
+
+/* Planet */
+
+#planet1{
+
+    top:120px;
+    left:70px;
+}
+
+
+/* Moon */
+
+#moon{
+
+    top:500px;
+    right:100px;
+}
+
+
+/* Yellow Star */
+
+#star1{
+
+    top:250px;
+    right:250px;
+}
+
+
+/* Blue Star */
+
+#star2{
+
+    top:720px;
+    left:150px;
+}
+
+
+/* Rocket */
+
+#rocket{
+
+    top:850px;
+    right:150px;
+}
+
+
+/* Origami Star */
+
+#paper-star{
+
+    top:350px;
+    left:25px;
+}
+
+
+/* =========================
+   WIGGLE ANIMATION
+========================= */
+
+@keyframes wiggle{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+    25%{
+        transform:rotate(4deg);
+    }
+
+    50%{
+        transform:rotate(-4deg);
+    }
+
+    75%{
+        transform:rotate(2deg);
+    }
+
+    100%{
+        transform:rotate(0deg);
+    }
+
+}
+
+
+/* Apply wiggle */
+
+.wiggle{
+
+    animation:wiggle 4s ease-in-out infinite;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width:700px){
+
+    header h1{
+        font-size:2.5rem;
+    }
+
+    section{
+
+        width:95%;
+    }
+
+    .decoration{
+
+        width:40px;
+    }
+
+}
